@@ -33,5 +33,6 @@ public class DataInitializer implements CommandLineRunner {
 
             System.out.println("=== Usuarios creados: admin/admin123 (ADMIN), visual/visual123 (VISUALIZADOR) ===");
         }
+        System.out.println("=== DataInitializer: " + usuarioRepository.count() + " usuarios en BD ===");
     }
 }

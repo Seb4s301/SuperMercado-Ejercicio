@@ -50,6 +50,7 @@ public class AuthController {
                     .build());
 
         } catch (Exception e) {
+            System.out.println("Login fallido para: " + request.getUsername() + " - " + e.getMessage());
             userDetailsService.registrarIntentoFallido(request.getUsername());
             return ResponseEntity.status(401).body("Credenciales incorrectas");
         }
