@@ -1,0 +1,443 @@
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.searchInput {
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 14px;
+  width: 300px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.searchInput:focus {
+  border-color: var(--primary);
+}
+
+.btnNew {
+  padding: 10px 20px;
+  background-color: var(--primary);
+  color: var(--text-light);
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.btnNew:hover {
+  background-color: var(--primary-hover);
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: var(--bg-white);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.table thead th {
+  background-color: var(--bg-light);
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid var(--border);
+}
+
+.table tbody tr {
+  transition: background-color 0.15s;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: var(--bg-light);
+}
+
+.table tbody tr:hover {
+  background-color: #f1f5f9;
+}
+
+.table tbody td {
+  padding: 14px 16px;
+  font-size: 14px;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border);
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btnDelete {
+  padding: 6px 14px;
+  background-color: #fee2e2;
+  color: var(--danger);
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.btnDelete:hover {
+  background-color: #fecaca;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+}
+
+.modal {
+  background-color: var(--bg-white);
+  border-radius: 12px;
+  width: 100%;
+  max-width: 600px;
+  padding: 28px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+
+.formGroup {
+  margin-bottom: 16px;
+}
+
+.formGroup label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.formGroup input,
+.formGroup select {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.formGroup input:focus,
+.formGroup select:focus {
+  border-color: var(--primary);
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.fieldError {
+  color: var(--danger);
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.btnCancel {
+  padding: 10px 20px;
+  background-color: var(--bg-light);
+  color: var(--text-secondary);
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.btnCancel:hover {
+  background-color: var(--border);
+}
+
+.btnSave {
+  padding: 10px 20px;
+  background-color: var(--primary);
+  color: var(--text-light);
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.btnSave:hover {
+  background-color: var(--primary-hover);
+}
+
+.message {
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.messageSuccess {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.messageError {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.confirmText {
+  font-size: 14px;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.confirmActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.btnConfirmDelete {
+  padding: 10px 20px;
+  background-color: var(--danger);
+  color: var(--text-light);
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.btnConfirmDelete:hover {
+  background-color: #dc2626;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 40px 16px;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+/* Detalle section */
+.detalleSection {
+  margin-top: 20px;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+
+.detalleHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.detalleHeader h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.btnAddProduct {
+  padding: 6px 14px;
+  background-color: #dcfce7;
+  color: #166534;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.btnAddProduct:hover {
+  background-color: #bbf7d0;
+}
+
+.detalleRow {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 40px;
+  gap: 10px;
+  align-items: end;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: var(--bg-light);
+  border-radius: 8px;
+}
+
+.detalleRow label {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+.detalleRow select,
+.detalleRow input {
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.detalleRow select:focus,
+.detalleRow input:focus {
+  border-color: var(--primary);
+}
+
+.detalleRow input[readonly] {
+  background-color: var(--bg-light);
+  color: var(--text-secondary);
+  border-style: dashed;
+}
+
+.btnRemoveRow {
+  width: 32px;
+  height: 32px;
+  background-color: #fee2e2;
+  color: var(--danger);
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+  margin-bottom: 1px;
+}
+
+.btnRemoveRow:hover {
+  background-color: #fecaca;
+}
+
+.totalRow {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  gap: 12px;
+}
+
+.totalLabel {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.totalValue {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* Estado badge */
+.estado {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.estadoPendiente {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.estadoPagada {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.estadoCancelada {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+/* Expand row */
+.expandBtn {
+  padding: 4px 10px;
+  background-color: #e0e7ff;
+  color: var(--primary);
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.expandBtn:hover {
+  background-color: #c7d2fe;
+}
+
+.detalleTable {
+  width: 100%;
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+.detalleTable th {
+  padding: 6px 10px;
+  text-align: left;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border);
+}
+
+.detalleTable td {
+  padding: 6px 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.detalleTable tr:last-child td {
+  border-bottom: none;
+}
+
+.expandedRow {
+  background-color: #f8fafc;
+}
+
+.expandedRow td {
+  padding: 12px 16px;
+}
